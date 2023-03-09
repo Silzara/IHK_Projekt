@@ -7,10 +7,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RequestLink {
-    public static void main(String[] args) throws IOException {
-        String a ="51.514244";
-        String b ="7.468429";
-        getLocation(a,b);
+    @Override
+    public String toString() {
+        return "RequestLink{}";
+    }
+
+    public RequestLink() {
+    }
+
+    public static void main(String[] args)  {
+//        String a ="51.514244";
+//        String b ="7.468429";
+//        getLocation(a,b);
     }
 
     public static void getLocation(String latitude, String longitude) throws IOException {
@@ -22,7 +30,7 @@ public class RequestLink {
         //Retrieving the contents of the specified page
         Scanner gl = new Scanner(url.openStream());
         //Instantiating the StringBuffer class to hold the result
-        StringBuffer dp = new StringBuffer();
+        StringBuilder dp = new StringBuilder();
         while (gl.hasNext()) {
             dp.append(gl.next());
             //System.out.println(sc.next());
