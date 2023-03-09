@@ -3,8 +3,6 @@ package com.example.bildorganisator_ihk_projekt;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-import java.util.ArrayList;
-
 public class HelloController {
     @FXML
     private Label welcomeText;
@@ -15,5 +13,6 @@ public class HelloController {
         GetImagesFromFolder test = new GetImagesFromFolder(browse);
         //
         welcomeText.setText(test.toString());
+        System.out.println(test);
     }
 }
