@@ -13,6 +13,6 @@ public class HelloController {
         GetImagesFromFolder test = new GetImagesFromFolder(browse);
         //
         welcomeText.setText(test.toString());
-        System.out.println(test);
+        //System.out.println(test);
     }
 }

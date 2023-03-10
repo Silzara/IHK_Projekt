@@ -6,6 +6,7 @@ module com.example.bildorganisator_ihk_projekt {
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
     requires java.desktop;
+    requires metadata.extractor;
 
     opens com.example.bildorganisator_ihk_projekt to javafx.fxml;
     exports com.example.bildorganisator_ihk_projekt;
