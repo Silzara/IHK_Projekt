@@ -43,16 +43,17 @@ public class Selector {
         JFileChooser f = new JFileChooser();
         f.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         f.showSaveDialog(null);
+        System.out.println(f.getCurrentDirectory().getAbsolutePath());
 
        // System.out.println(f.getCurrentDirectory());
         //System.out.println(f.getSelectedFile());
 
-        GetImagesFromFolder alo = new GetImagesFromFolder(f.getSelectedFile().toString());
-        Path ttt = Path.of(f.getSelectedFile().toString());
-        ArrayList aloAL = new ArrayList<>();
-        alo.GetImagesFromFolders(ttt,aloAL);
-        //System.out.println("ArrayList is:");
-        System.out.println(aloAL.get(3));
+//        GetImagesFromFolder alo = new GetImagesFromFolder(f.getSelectedFile().toString());
+//        Path ttt = Path.of(f.getSelectedFile().toString());
+//        ArrayList aloAL = new ArrayList<>();
+//        alo.GetImagesFromFolders(ttt,aloAL);
+//        //System.out.println("ArrayList is:");
+//        System.out.println(aloAL.get(3));
 
     }
 }

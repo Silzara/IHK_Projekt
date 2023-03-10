@@ -39,14 +39,14 @@ public class GetImagesFromFolder {
                 }
             }
             //System.out.println(photoList);// else if ends here
+
         }
     }
 
     public ArrayList GetImagesFromFolders(Path path, ArrayList result) {
-        ArrayList<String> photoList = new ArrayList<String>();
-        File file = new File(path.toUri());
+
         Stack<File> s = new Stack<>();
-        s.push(file);
+        s.push(path.toFile());
         // initially stack is not empty
         System.out.println("The images found inside the folder are: ");
         while (!s.empty()) {
