@@ -31,25 +31,25 @@ public class RequestLink {
      * @throws IOException If an I/O error occurs while reading from the URL connection.
      */
     public static void getLocation(String latitude, String longitude) throws IOException {
-//Instantiating the URL class
+      //Instantiating the URL class
         URL url = new URL("https://nominatim.openstreetmap.org/reverse?format=xml&" +
                 "lat=" + latitude +
                 "&lon=" + longitude
                 + "&zoom=8&addressdetails=1");
 
-//Retrieving the contents of the specified page
+      //Retrieving the contents of the specified page
         Scanner gl = new Scanner(url.openStream());
 
-//Instantiating the StringBuilder class to hold the result
+      //Instantiating the StringBuilder class to hold the result
         StringBuilder dp = new StringBuilder();
         while (gl.hasNext()) {
             dp.append(gl.next());
         }
 
-//Retrieving the String from the StringBuilder object
+      //Retrieving the String from the StringBuilder object
         String result = dp.toString();
 
-//Extracting city, state and country information from the XML response
+      //Extracting city, state and country information from the XML response
         Pattern city = Pattern.compile("<city>(.*?)</city");
         Matcher cityMatcher = city.matcher(result);
         if (cityMatcher.find()) System.out.println(cityMatcher.group(1));
